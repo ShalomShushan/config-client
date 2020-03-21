@@ -1,0 +1,8 @@
+# When working with Spring Cloud Bus, we need an AMQP technology defined. Rabbits are cute, so..
+---
+spring:
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: guest
+    password: guest

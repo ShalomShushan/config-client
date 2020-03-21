@@ -20,18 +20,37 @@
 	</properties>
 
 	<dependencies>
+
+		<!-- It's a web app	-->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
 		</dependency>
+
+		<!-- Makes this a config client -->
 		<dependency>
 			<groupId>org.springframework.cloud</groupId>
 			<artifactId>spring-cloud-starter-config</artifactId>
 		</dependency>
 
+		<!--	There was this annoying message in my config file that Spring Boot Annotation Processor
+		was having issues. This makes it shut up.	-->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-configuration-processor</artifactId>
+		</dependency>
+
+		<!--	We need actuator here for sure	-->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-actuator</artifactId>
+		</dependency>
+
+		<!--	this opens up the bus-refresh endpoint	-->
+		<dependency>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-starter-bus-amqp</artifactId>
+			<version>2.2.1.RELEASE</version>
 		</dependency>
 
 		<dependency>
