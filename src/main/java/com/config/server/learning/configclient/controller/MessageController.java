@@ -16,10 +16,11 @@ public class MessageController {
     }
 
 
-    @GetMapping("/message")
+    @GetMapping("/get-config")
     public Map<String, String> welcome() {
         Map<String, String> map = new HashMap<>();
         map.put("message", applicationConfiguration.getMessage());
+        map.put("name", applicationConfiguration.getName());
         return map;
     }
 

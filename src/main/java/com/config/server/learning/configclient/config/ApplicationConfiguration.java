@@ -1,5 +1,6 @@
 package com.config.server.learning.configclient.config;
 
+import lombok.Data;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.stereotype.Component;
 
@@ -10,19 +11,10 @@ import org.springframework.stereotype.Component;
  * So on the config repo, there will be a file [app-name]-[env].properties (i.e config-client-dev.properties),
  * and in it `application.message=value`
  */
+@Data
 @Component
 @ConfigurationProperties("application")
 public class ApplicationConfiguration {
-
-    // So far only have one configuration value.
     private String message;
-
-    // I could use lombok I guess.
-    public String getMessage() {
-        return message;
-    }
-
-    public void setMessage(String message) {
-        this.message = message;
-    }
+    private String name;
 }
