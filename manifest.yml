@@ -1,0 +1,8 @@
+---
+applications:
+  - name: config-client
+    memory: 1G
+    instances: 1
+    services:
+      - demo-app-rabbitmq
+    random-route: true
